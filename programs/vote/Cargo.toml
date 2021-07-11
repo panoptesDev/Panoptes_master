@@ -1,0 +1,34 @@
+[package]
+name = "panoptes-vote-program"
+version = "1.7.3"
+description = "Panoptes Vote program"
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-vote-program"
+edition = "2018"
+
+[dependencies]
+bincode = "1.3.1"
+log = "0.4.11"
+num-derive = "0.3"
+num-traits = "0.2"
+serde = "1.0.122"
+serde_derive = "1.0.103"
+panoptes-frozen-abi = { path = "../../frozen-abi", version = "=1.7.3" }
+panoptes-frozen-abi-macro = { path = "../../frozen-abi/macro", version = "=1.7.3" }
+panoptes-logger = { path = "../../logger", version = "=1.7.3" }
+panoptes-metrics = { path = "../../metrics", version = "=1.7.3" }
+panoptes-sdk = { path = "../../sdk", version = "=1.7.3" }
+thiserror = "1.0"
+
+[build-dependencies]
+rustc_version = "0.2"
+
+[lib]
+crate-type = ["lib"]
+name = "panoptes_vote_program"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

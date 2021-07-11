@@ -1,0 +1,24 @@
+[package]
+name = "panoptes-failure-program"
+version = "1.7.3"
+description = "Panoptes failure program"
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-failure-program"
+edition = "2018"
+
+[dependencies]
+panoptes-sdk = { path = "../../sdk", version = "=1.7.3" }
+
+[dev-dependencies]
+panoptes-runtime = { path = "../../runtime", version = "=1.7.3" }
+
+[lib]
+crate-type = ["lib", "cdylib"]
+name = "panoptes_failure_program"
+
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
