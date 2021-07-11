@@ -1,0 +1,19 @@
+[package]
+name = "panoptes-measure"
+description = "Blockchain, Rebuilt for Scale"
+version = "1.7.3"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-measure"
+readme = "../README.md"
+repository = "https://github.com/panoptes-labs/panoptes"
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+license = "Apache-2.0"
+edition = "2018"
+
+[dependencies]
+log = "0.4.11"
+panoptes-sdk = { path = "../sdk", version = "=1.7.3" }
+panoptes-metrics = { path = "../metrics", version = "=1.7.3" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
