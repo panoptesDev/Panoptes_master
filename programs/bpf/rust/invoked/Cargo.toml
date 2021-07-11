@@ -1,0 +1,23 @@
+[package]
+name = "panoptes-bpf-rust-invoked"
+version = "1.7.3"
+description = "Panoptes BPF test program written in Rust"
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-bpf-rust-invoked"
+edition = "2018"
+
+[dependencies]
+panoptes-program = { path = "../../../../sdk/program", version = "=1.7.3" }
+
+[features]
+default = ["program"]
+program = []
+
+[lib]
+crate-type = ["lib", "cdylib"]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
