@@ -1,0 +1,35 @@
+[package]
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+edition = "2018"
+name = "panoptes-sys-tuner"
+description = "The panoptes cluster system tuner daemon"
+version = "1.7.3"
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-sys-tuner"
+publish = true
+
+[dependencies]
+clap = "2.33.1"
+log = "0.4.11"
+libc = "0.2.81"
+panoptes-clap-utils = { path = "../clap-utils", version = "=1.7.3" }
+panoptes-logger = { path = "../logger", version = "=1.7.3" }
+panoptes-version = { path = "../version", version = "=1.7.3" }
+
+[target."cfg(unix)".dependencies]
+unix_socket2 = "0.5.4"
+users = "0.10.0"
+nix = "0.19.0"
+sysctl = "0.4.0"
+
+[lib]
+name = "panoptes_sys_tuner"
+
+[[bin]]
+name = "panoptes-sys-tuner"
+path = "src/main.rs"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
