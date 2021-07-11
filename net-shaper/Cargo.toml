@@ -1,0 +1,25 @@
+[package]
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+edition = "2018"
+name = "panoptes-net-shaper"
+description = "The panoptes cluster network shaping tool"
+version = "1.7.3"
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+publish = false
+
+[dependencies]
+clap = "2.33.1"
+serde = "1.0.122"
+serde_json = "1.0.56"
+panoptes-clap-utils = { path = "../clap-utils", version = "=1.7.3" }
+panoptes-logger = { path = "../logger", version = "=1.7.3" }
+rand = "0.7.0"
+
+[[bin]]
+name = "panoptes-net-shaper"
+path = "src/main.rs"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
