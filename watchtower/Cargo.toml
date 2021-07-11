@@ -1,0 +1,27 @@
+[package]
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+edition = "2018"
+name = "panoptes-watchtower"
+description = "Blockchain, Rebuilt for Scale"
+version = "1.7.3"
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-watchtower"
+
+[dependencies]
+clap = "2.33.1"
+log = "0.4.11"
+humantime = "2.0.1"
+panoptes-clap-utils = { path = "../clap-utils", version = "=1.7.3" }
+panoptes-cli-config = { path = "../cli-config", version = "=1.7.3" }
+panoptes-cli-output = { path = "../cli-output", version = "=1.7.3" }
+panoptes-client = { path = "../client", version = "=1.7.3" }
+panoptes-logger = { path = "../logger", version = "=1.7.3" }
+panoptes-metrics = { path = "../metrics", version = "=1.7.3" }
+panoptes-notifier = { path = "../notifier", version = "=1.7.3" }
+panoptes-sdk = { path = "../sdk", version = "=1.7.3" }
+panoptes-version = { path = "../version", version = "=1.7.3" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
