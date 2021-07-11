@@ -1,0 +1,23 @@
+[package]
+name = "panoptes-sdk-macro"
+version = "1.7.3"
+description = "Panoptes SDK Macro"
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+repository = "https://github.com/panoptes-labs/panoptes"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-sdk-macro"
+license = "Apache-2.0"
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+bs58 = "0.3.0"
+proc-macro2 = "1.0.19"
+quote = "1.0"
+syn = { version = "1.0", features = ["full", "extra-traits"] }
+rustversion = "1.0.3"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
