@@ -1,0 +1,39 @@
+[package]
+name = "panoptes-poh"
+version = "1.7.3"
+description = "Panoptes PoH"
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-poh"
+edition = "2018"
+
+[dependencies]
+core_affinity = "0.5.10"
+crossbeam-channel = "0.4"
+log = "0.4.11"
+panoptes-ledger = { path = "../ledger", version = "=1.7.3" }
+panoptes-measure = { path = "../measure", version = "=1.7.3" }
+panoptes-metrics = { path = "../metrics", version = "=1.7.3" }
+panoptes-runtime = { path = "../runtime", version = "=1.7.3" }
+panoptes-sdk = { path = "../sdk", version = "=1.7.3" }
+panoptes-sys-tuner = { path = "../sys-tuner", version = "=1.7.3" }
+thiserror = "1.0"
+
+[dev-dependencies]
+bincode = "1.3.1"
+matches = "0.1.6"
+rand = "0.7.0"
+panoptes-logger = { path = "../logger", version = "=1.7.3" }
+panoptes-perf = { path = "../perf", version = "=1.7.3" }
+
+[lib]
+crate-type = ["lib"]
+name = "panoptes_poh"
+
+[[bench]]
+name = "poh"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

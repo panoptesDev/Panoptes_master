@@ -1,0 +1,37 @@
+[package]
+name = "panoptes-perf"
+version = "1.7.3"
+description = "Panoptes Performance APIs"
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-perf"
+edition = "2018"
+
+[dependencies]
+bincode = "1.3.1"
+curve25519-dalek = { version = "2" }
+dlopen = "0.1.8"
+dlopen_derive = "0.1.4"
+lazy_static = "1.4.0"
+log = "0.4.11"
+rand = "0.7.0"
+rayon = "1.5.0"
+serde = "1.0.126"
+panoptes-logger = { path = "../logger", version = "=1.7.3" }
+panoptes-metrics = { path = "../metrics", version = "=1.7.3" }
+panoptes-sdk = { path = "../sdk", version = "=1.7.3" }
+panoptes-rayon-threadlimit = { path = "../rayon-threadlimit", version = "=1.7.3" }
+
+[lib]
+name = "panoptes_perf"
+
+[dev-dependencies]
+matches = "0.1.6"
+
+[[bench]]
+name = "sigverify"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
