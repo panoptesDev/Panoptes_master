@@ -1,0 +1,29 @@
+[package]
+name = "panoptes-keygen"
+version = "1.7.3"
+description = "Panoptes key generation utility"
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-keygen"
+edition = "2018"
+
+[dependencies]
+bs58 = "0.3.1"
+clap = "2.33"
+dirs-next = "2.0.0"
+num_cpus = "1.13.0"
+panoptes-clap-utils = { path = "../clap-utils", version = "=1.7.3" }
+panoptes-cli-config = { path = "../cli-config", version = "=1.7.3" }
+panoptes-remote-wallet = { path = "../remote-wallet", version = "=1.7.3" }
+panoptes-sdk = { path = "../sdk", version = "=1.7.3" }
+panoptes-version = { path = "../version", version = "=1.7.3" }
+tiny-bip39 = "0.7.0"
+
+[[bin]]
+name = "panoptes-keygen"
+path = "src/keygen.rs"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

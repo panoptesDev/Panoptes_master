@@ -1,0 +1,39 @@
+[package]
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+edition = "2018"
+name = "panoptes-genesis"
+description = "Blockchain, Rebuilt for Scale"
+version = "1.7.3"
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-genesis"
+
+[dependencies]
+base64 = "0.12.3"
+clap = "2.33.1"
+chrono = "0.4"
+serde = "1.0.122"
+serde_json = "1.0.56"
+serde_yaml = "0.8.13"
+panoptes-clap-utils = { path = "../clap-utils", version = "=1.7.3" }
+panoptes-cli-config = { path = "../cli-config", version = "=1.7.3" }
+panoptes-exchange-program = { path = "../programs/exchange", version = "=1.7.3" }
+panoptes-ledger = { path = "../ledger", version = "=1.7.3" }
+panoptes-logger = { path = "../logger", version = "=1.7.3" }
+panoptes-runtime = { path = "../runtime", version = "=1.7.3" }
+panoptes-sdk = { path = "../sdk", version = "=1.7.3" }
+panoptes-stake-program = { path = "../programs/stake", version = "=1.7.3" }
+panoptes-version = { path = "../version", version = "=1.7.3" }
+panoptes-vote-program = { path = "../programs/vote", version = "=1.7.3" }
+tempfile = "3.1.0"
+
+[[bin]]
+name = "panoptes-genesis"
+path = "src/main.rs"
+
+[lib]
+name = "panoptes_genesis"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

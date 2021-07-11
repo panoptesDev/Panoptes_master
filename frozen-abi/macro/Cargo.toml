@@ -1,0 +1,21 @@
+[package]
+name = "panoptes-frozen-abi-macro"
+version = "1.7.3"
+description = "Panoptes Frozen ABI Macro"
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+repository = "https://github.com/panoptes-labs/panoptes"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-frozen-abi-macro"
+license = "Apache-2.0"
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0"
+quote = "1.0"
+syn = { version = "1.0", features = ["full", "extra-traits"] }
+
+[build-dependencies]
+rustc_version = "0.2"
