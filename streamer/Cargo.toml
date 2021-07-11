@@ -1,0 +1,30 @@
+[package]
+name = "panoptes-streamer"
+version = "1.7.3"
+description = "Panoptes Streamer"
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-streamer"
+edition = "2018"
+
+[dependencies]
+log = "0.4.11"
+panoptes-metrics = { path = "../metrics", version = "=1.7.3" }
+panoptes-sdk = { path = "../sdk", version = "=1.7.3" }
+thiserror = "1.0"
+panoptes-measure = { path = "../measure", version = "=1.7.3" }
+panoptes-logger = { path = "../logger", version = "=1.7.3" }
+libc = "0.2.81"
+nix = "0.19.0"
+panoptes-perf = { path = "../perf", version = "=1.7.3" }
+
+[dev-dependencies]
+
+[lib]
+crate-type = ["lib"]
+name = "panoptes_streamer"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

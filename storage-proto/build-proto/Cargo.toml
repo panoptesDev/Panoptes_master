@@ -1,0 +1,15 @@
+[package]
+authors = ["Panoptes Maintainers <maintainers@panoptes.com>"]
+description = "Blockchain, Rebuilt for Scale"
+edition = "2018"
+homepage = "https://panoptes.com/"
+license = "Apache-2.0"
+name = "proto"
+publish = false
+repository = "https://github.com/panoptes-labs/panoptes"
+version = "1.7.3"
+
+[workspace]
+
+[dependencies]
+tonic-build = "0.4.0"
