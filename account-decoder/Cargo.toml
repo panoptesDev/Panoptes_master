@@ -1,0 +1,30 @@
+[package]
+name = "panoptes-account-decoder"
+version = "1.7.3"
+description = "Panoptes account decoder"
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+repository = "https://github.com/panoptes-labs/panoptes"
+homepage = "https://panoptes.com/"
+documentation = "https://docs.rs/panoptes-account-decoder"
+license = "Apache-2.0"
+edition = "2018"
+
+[dependencies]
+base64 = "0.12.3"
+bincode = "1.3.1"
+bs58 = "0.3.1"
+bv = "0.11.1"
+Inflector = "0.11.4"
+lazy_static = "1.4.0"
+serde = "1.0.122"
+serde_derive = "1.0.103"
+serde_json = "1.0.56"
+panoptes-config-program = { path = "../programs/config", version = "=1.7.3" }
+panoptes-sdk = { path = "../sdk", version = "=1.7.3" }
+panoptes-vote-program = { path = "../programs/vote", version = "=1.7.3" }
+spl-token-v2-0 = { package = "spl-token", version = "=3.1.1", features = ["no-entrypoint"] }
+thiserror = "1.0"
+zstd = "0.5.1"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

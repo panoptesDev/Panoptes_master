@@ -1,0 +1,31 @@
+[package]
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+edition = "2018"
+name = "panoptes-banking-bench"
+version = "1.7.3"
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+publish = false
+
+[dependencies]
+clap = "2.33.1"
+crossbeam-channel = "0.4"
+log = "0.4.11"
+rand = "0.7.0"
+rayon = "1.5.0"
+panoptes-core = { path = "../core", version = "=1.7.3" }
+panoptes-clap-utils = { path = "../clap-utils", version = "=1.7.3" }
+panoptes-gossip = { path = "../gossip", version = "=1.7.3" }
+panoptes-ledger = { path = "../ledger", version = "=1.7.3" }
+panoptes-logger = { path = "../logger", version = "=1.7.3" }
+panoptes-measure = { path = "../measure", version = "=1.7.3" }
+panoptes-perf = { path = "../perf", version = "=1.7.3" }
+panoptes-poh = { path = "../poh", version = "=1.7.3" }
+panoptes-runtime = { path = "../runtime", version = "=1.7.3" }
+panoptes-streamer = { path = "../streamer", version = "=1.7.3" }
+panoptes-sdk = { path = "../sdk", version = "=1.7.3" }
+panoptes-version = { path = "../version", version = "=1.7.3" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

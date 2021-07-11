@@ -1,0 +1,20 @@
+[package]
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+edition = "2018"
+name = "panoptes-bench-streamer"
+version = "1.7.3"
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+publish = false
+
+[dependencies]
+clap = "2.33.1"
+panoptes-clap-utils = { path = "../clap-utils", version = "=1.7.3" }
+panoptes-streamer = { path = "../streamer", version = "=1.7.3" }
+panoptes-logger = { path = "../logger", version = "=1.7.3" }
+panoptes-net-utils = { path = "../net-utils", version = "=1.7.3" }
+panoptes-version = { path = "../version", version = "=1.7.3" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
