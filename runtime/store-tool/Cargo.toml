@@ -1,0 +1,22 @@
+[package]
+authors = ["Panoptes Maintainers <maintainers@panoptes.foundation>"]
+edition = "2018"
+name = "panoptes-store-tool"
+description = "Tool to inspect append vecs"
+version = "1.7.3"
+repository = "https://github.com/panoptes-labs/panoptes"
+license = "Apache-2.0"
+homepage = "https://panoptes.com/"
+publish = false
+
+[dependencies]
+log = { version = "0.4.11" }
+panoptes-logger = { path = "../../logger", version = "=1.7.3" }
+panoptes-version = { path = "../../version", version = "=1.7.3" }
+panoptes-measure = { path = "../../measure", version = "=1.7.3" }
+panoptes-runtime = { path = "..", version = "=1.7.3" }
+panoptes-sdk = { path = "../../sdk", version = "=1.7.3" }
+clap = "2.33.1"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
